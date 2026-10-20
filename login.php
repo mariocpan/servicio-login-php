@@ -1,0 +1,15 @@
+<?php
+// Responde en formato json
+header("Content-Type: application/json");
+// Datos que envia el cliente
+$datos = json_decode(file_get_contents("php://input"), true);
+// 
+$usuario = $datos["usuario"] ?? "";
+$clave = $datos["clave"] ?? "";
+// Validación: usuario y contraseña no pueden estar vacios 
+if ($usuario == "" || $clave =="") {
+echo json_encode(["mensaje" => "Faltan datos"]);
+exit;
+}
+echo json_encode(["mensaje" => "Datos recibidos"]);
+?>
