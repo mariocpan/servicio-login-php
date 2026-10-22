@@ -1,0 +1,3 @@
+   GET  http://localhost:8000/index.php
+   POST http://localhost:8000/registro.php
+   POST http://localhost:8000/login.php

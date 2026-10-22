@@ -1,7 +1,7 @@
 <?php
-// Responde en formato json
+// Respuesta en formato json
 header("Content-Type: application/json");
-// Datos que envia el cliente
+// lee los datos que envia el cliente
 $datos = json_decode(file_get_contents("php://input"), true);
 // 
 $usuario = $datos["usuario"] ?? "";
